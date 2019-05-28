@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/ic-home" android:icon="@drawable/tab_home" android:title=""/>
+    <item android:id="@+id/ic-search" android:icon="@drawable/tab_search" android:title=""/>
+    <item android:id="@+id/ic-share" android:icon="@drawable/tab_share" android:title=""/>
+    <item android:id="@+id/ic-news" android:icon="@drawable/tab_news" android:title=""/>
+    <item android:id="@+id/ic-profile" android:icon="@drawable/tab_profile" android:title=""/>
+</menu>
