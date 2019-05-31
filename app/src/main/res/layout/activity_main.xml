@@ -8,7 +8,7 @@
     <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/mainContainer">
+    >
         <android.support.design.widget.AppBarLayout
                 android:background="@color/colorToolbar"
                 android:id="@+id/appbar"
@@ -26,8 +26,9 @@
                         android:layout_height="?attr/actionBarSize"
                         android:layout_width="match_parent"
                         app:contentInsetStart="0dp">
-                    <android.support.constraint.ConstraintLayout android:layout_width="match_parent"
-                                                                 android:layout_height="match_parent">
+                    <android.support.constraint.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
 
                         <ImageView
                                 android:layout_width="wrap_content"
@@ -55,7 +56,6 @@
                         <View
                                 android:layout_width="match_parent"
                                 android:layout_height="2dp"
-                                android:id="@+id/toolbarBorder"
                                 android:background="@color/colorBorder"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -72,23 +72,24 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/appbar"
                 android:id="@+id/homeViewPager"
-                app:layout_constraintBottom_toTopOf="@+id/BottomNavigationView"/>
+                app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"/>
         <View
                 android:layout_width="0dp"
                 android:layout_height="2dp"
-                android:id="@+id/bottomBarBorder"
-                android:background="@color/colorBorder" app:layout_constraintBottom_toTopOf="@+id/BottomNavigationView"
+                android:background="@color/colorBorder" app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
                 app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"/>
 
 
         <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+                android:id="@+id/bottomNavigationView"
                 android:layout_width="395dp"
                 android:layout_height="50dp"
                 app:menu="@menu/bottom_navigation_menu"
+                app:itemIconTint="@color/bottom_navigation_style"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                android:id="@+id/BottomNavigationView"/>
+                app:layout_constraintEnd_toEndOf="parent">
+        </com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx>
     </android.support.constraint.ConstraintLayout>
 </android.support.design.widget.CoordinatorLayout>

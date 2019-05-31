@@ -9,16 +9,15 @@ import stayincollege.com.utils.BottomNavigationViewHelper
 class SearchActivity : AppCompatActivity() {
 
     private val TAG = "SearchActivity"
+    private val ActivityNumber = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_search)
     }
 
     fun setupNavigationView(){
-        BottomNavigationViewHelper.setupBottomNavigationView(BottomNavigationView)
-        BottomNavigationViewHelper.setupNavigationRoute(this, BottomNavigationView)
-        val menu = BottomNavigationView.menu
-        val menuItem = menu.getItem(1)
-        menuItem.setChecked(true)
+        BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationView)
+        BottomNavigationViewHelper.setupNavigationRoute(this, bottomNavigationView)
+        bottomNavigationView.menu.getItem(ActivityNumber).setChecked(true)
     }
 }

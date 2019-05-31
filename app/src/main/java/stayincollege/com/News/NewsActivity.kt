@@ -9,6 +9,7 @@ import stayincollege.com.utils.BottomNavigationViewHelper
 class NewsActivity : AppCompatActivity() {
 
     private val TAG = "NewsActivity"
+    private val ActivityNumber = 3
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -16,10 +17,8 @@ class NewsActivity : AppCompatActivity() {
     }
 
     fun setupNavigationView(){
-        BottomNavigationViewHelper.setupBottomNavigationView(BottomNavigationView)
-        BottomNavigationViewHelper.setupNavigationRoute(this, BottomNavigationView)
-        val menu = BottomNavigationView.menu
-        val menuItem = menu.getItem(3)
-        menuItem.setChecked(true)
+        BottomNavigationViewHelper.setupBottomNavigationView(bottomNavigationView)
+        BottomNavigationViewHelper.setupNavigationRoute(this, bottomNavigationView)
+        bottomNavigationView.menu.getItem(ActivityNumber).setChecked(true)
     }
 }
